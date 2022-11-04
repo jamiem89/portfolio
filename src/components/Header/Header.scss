@@ -1,0 +1,145 @@
+.header {
+    position: fixed;
+    width: 100vw;
+    top: 1rem;
+    left: 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @media (min-width: 960px) {
+        top: 1.8rem;
+    }
+
+    &__logo {
+        position: relative;
+        z-index: 100;
+        display: inline-block;
+        svg {
+            width: 2.2rem;
+            height: 2.7rem;
+            fill: var(--c-darkest);
+            transition: all .3s ease-in-out;
+
+            @media (min-width: 960px) {
+                width: 3.4em;
+                height: 4rem;
+            }
+        }
+    }
+
+    &__trigger {
+        position: relative;
+        display: block;
+        height: 2.2rem;
+        width: 2.6rem;
+        text-indent: -999rem;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+            height: .3rem;
+            width: 100%;
+            background-color: var(--c-darkest);
+            transition: all .3s ease-in-out;
+        }
+
+        &:after {
+            transform: translate(-50%, -150%);
+            // transform: translate(-50%, -50%) rotate(40deg);
+        }
+
+        &:before {
+            transform: translate(-50%, 50%);
+            // transform: translate(-50%, -50%) rotate(-40deg);
+        }
+
+        @media (min-width: 960px) {
+            display: none;
+        }
+
+    }
+
+    &__menu {
+        position: fixed;
+        top: 0;
+        left: 100vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--c-darkest);
+        padding: 2rem;
+        list-style-type: none;
+        text-align: center;
+        transition: all .3s ease-in-out;
+
+        @media (min-width: 960px) {
+            position: relative;
+            display: inline-block;
+            top: unset;
+            left: unset;
+            width: auto;
+            height: auto;
+            background-color: transparent;
+            padding: 0;
+            text-align: left;
+        }
+
+        &.is-active {
+            left: 0;
+        }
+    }
+
+    &__menu-item {
+        width: 100%;
+        margin-bottom: 2.4rem;
+    }
+
+    &__menu-link {
+        font-size: 1.6rem;
+        letter-spacing: .15rem;
+        font-weight: 400;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--c-brand);
+    }
+}
+
+// Menu active styles
+
+.menu-active {
+
+    .header {
+
+        &__logo svg {
+            fill: var(--c-brand);
+            transform: rotate(180deg)
+        }
+
+        &__menu {
+            left: 0;
+        }
+
+        &__trigger:before {
+            background-color: var(--c-brand);
+            transform: translate(-50%, -50%) rotate(-140deg);
+        }
+
+        &__trigger:after {
+            background-color: var(--c-brand);
+            transform: translate(-50%, -50%) rotate(140deg);
+        }
+    }
+}

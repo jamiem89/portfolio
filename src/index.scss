@@ -1,0 +1,99 @@
+:root {
+    // Colours
+    // --c-brand: #00FF00;
+    --c-brand: #80FCD3;
+    --c-darkest: #2D2D2D;
+    --c-lightest: #FFFFFF;
+
+    // Grid
+    --col-1: 8.33%;
+    --col-2: 16.67%;
+    --col-3: 25%;
+    --col-4: 33.33%;
+    --col-5: 41.67%;
+    --col-6: 50%;
+    --col-7: 58.33%;
+    --col-8: 66.67%;
+    --col-9: 75%;
+    --col-10: 83.33%;
+    --col-11: 91.67%;
+}
+
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 200;
+
+    // Fallback vars
+    --text-color: var(--c-darkest);
+    --bg-color: var(--c-lightest);
+}
+
+// Spacing
+.container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 960px) {
+        width: 95%;
+        max-width: 116rem;
+    }
+}
+
+// Typography
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    color: var(--text-color);
+    letter-spacing: -0.4rem;
+    font-weight: 400;
+}
+
+p {
+    line-height: 1.125;
+}
+
+// Buttons
+
+.btn {
+    color: var(--bg-color);
+    background-color: var(--text-color);
+    text-decoration: none;
+    display: inline-block;
+    padding: 1.4rem 2rem 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: .05rem;
+
+    &--outline {
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        border: .1rem solid var(--text-color);
+    }
+}
+
+// Backgrounds
+
+.section-dark {
+
+}
+
+.section-brand {
+    --text-color: var(--c-darkest);
+    --bg-color: var(--c-brand);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
