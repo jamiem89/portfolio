@@ -1,15 +1,21 @@
 import { ReactComponent as Logo } from '../../icons/logo.svg';
+import { useDetectScroll } from "@smakss/react-scroll-direction";
 import './Header.scss'
 
 const Header = () => {
 
+    const [scrollDir] = useDetectScroll({});
+
     const toggleMenu = () => {
         const body = document.querySelector('body');
         body.classList.toggle('menu-active');
+        body.classList.toggle('stop-scrolling');
     }
 
     return (
-        <header className="header">
+        <header className={
+            scrollDir === "still" ? "header" : scrollDir === "up" ? "header" : "header is-hidden"
+        }>
             <div className="container">
                 <a href="/" className="header__logo">
                     <Logo />

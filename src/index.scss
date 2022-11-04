@@ -40,6 +40,10 @@ body {
     --bg-color: var(--c-lightest);
 }
 
+body.stop-scrolling {
+    overflow: hidden;
+}
+
 // Spacing
 .container {
     width: 90%;
