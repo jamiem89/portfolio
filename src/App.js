@@ -1,6 +1,7 @@
 import Header from './components/Header/Header';
 import HomeHero from './components/HomeHero/HomeHero';
 import LatestProjects from './components/LatestProjects/LatestProjects';
+import ButtonTest from './components/ButtonTest/ButtonTest';
 
 function App() {
 
@@ -23,14 +24,15 @@ function App() {
                 livelink: 'http://www.google.com',
                 repolink: ''
             },
-            {
-                img: 'https://via.placeholder.com/470x315',
-                title: 'Lorem ipsum dolor sit amet.',
-                desc: '<p>Custom WordPress theme built using HTML, SCSS, JS and PHP. Featured on <a href="#">siteinspire</a>.</p>',
-                livelink: 'http://www.google.com',
-                repolink: 'http://www.github.com'
-            }
+            // {
+            //     img: 'https://via.placeholder.com/470x315',
+            //     title: 'Lorem ipsum dolor sit amet.',
+            //     desc: '<p>Custom WordPress theme built using HTML, SCSS, JS and PHP. Featured on <a href="#">siteinspire</a>.</p>',
+            //     livelink: 'http://www.google.com',
+            //     repolink: 'http://www.github.com'
+            // }
         ]}/>
+        <ButtonTest />
     </div>
     );
 }

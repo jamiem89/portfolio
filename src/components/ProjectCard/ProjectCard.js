@@ -2,8 +2,6 @@ import './ProjectCard.scss';
 
 const ProjectCard = ({img, title, desc, livelink, repolink}) => {
 
-    console.log(desc);
-
     return (
         <div className="project-card">
             <div className="project-card__img">
