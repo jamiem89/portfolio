@@ -1,0 +1,53 @@
+.project-card {
+
+    margin-bottom: 4rem;
+
+    @media (min-width: 960px) {
+        margin-bottom: 8rem;
+    }
+
+    &__img {
+        margin-bottom: 2rem;
+
+        @media (min-width: 960px) {
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    &__title {
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+        font-weight: 400;
+
+        @media (min-width: 960px) {
+            font-size: 2.4rem;
+            margin-bottom: 1.6rem;
+        }
+
+    }
+
+    &__desc {
+        font-size: 2rem;
+        margin-bottom: 1.8rem;
+        max-width: 47rem;
+
+        @media (min-width: 960px) {
+            font-size: 2.4rem;
+            margin-bottom: 2rem;
+        }
+
+        a {
+            color: var(--c-brand);
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__actions {
+        .btn:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+}

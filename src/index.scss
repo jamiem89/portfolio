@@ -61,7 +61,7 @@ body.stop-scrolling {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     color: var(--text-color);
-    letter-spacing: -0.4rem;
+    letter-spacing: -.05rem;
     font-weight: 400;
 }
 
@@ -69,11 +69,16 @@ p {
     line-height: 1.125;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 // Buttons
 
 .btn {
     color: var(--bg-color);
-    background-color: var(--text-color);
+    background-color: var(--btn-color);
     text-decoration: none;
     display: inline-block;
     padding: 1.4rem 2rem 1rem;
@@ -83,21 +88,27 @@ p {
     letter-spacing: .05rem;
 
     &--outline {
-        color: var(--text-color);
+        color: var(--btn-color);
+        outline: .1rem var(--btn-color) solid;
+        outline-offset: -.1rem;
         background-color: var(--bg-color);
-        border: .1rem solid var(--text-color);
     }
 }
 
 // Backgrounds
 
 .section-dark {
-
+    --text-color: var(--c-lightest);
+    --bg-color: var(--c-darkest);
+    --btn-color: var(--c-brand);
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .section-brand {
     --text-color: var(--c-darkest);
     --bg-color: var(--c-brand);
+    --btn-color: var(--c-darkest);
     background-color: var(--bg-color);
     color: var(--text-color);
 }
