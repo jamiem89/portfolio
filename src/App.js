@@ -1,7 +1,7 @@
 import Header from './components/Header/Header';
 import HomeHero from './components/HomeHero/HomeHero';
 import LatestProjects from './components/LatestProjects/LatestProjects';
-import ButtonTest from './components/ButtonTest/ButtonTest';
+import ConfettiCanon from './components/ConfettiCanon/ConfettiCanon';
 
 function App() {
 
@@ -32,7 +32,7 @@ function App() {
             //     repolink: 'http://www.github.com'
             // }
         ]}/>
-        <ButtonTest />
+        <ConfettiCanon />
     </div>
     );
 }

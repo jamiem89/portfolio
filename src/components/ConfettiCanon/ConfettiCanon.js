@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useReward } from 'react-rewards';
 
-const ButtonTest = () => {
+const ConfettiCanon = () => {
 
     const handleScroll = () => {
 
@@ -49,4 +49,4 @@ const ButtonTest = () => {
 
 }
 
-export default ButtonTest;
+export default ConfettiCanon;
