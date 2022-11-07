@@ -7,8 +7,8 @@ const HomeHero = () => {
                 <h1 className="home-hero__title">Hi, I'm Jamie</h1>
                 <p className="home-hero__intro">Frontend developer based in the UK, with an interest in graphic design and the great outdoors.</p>
                 <div className="home-hero__actions">
-                    <a href="/" className="btn">View projects</a>
-                    <a href="/" className="btn btn--outline">Download resume</a>
+                    <a href="/" className="btn"><span>View projects</span></a>
+                    <a href="/" className="btn btn--outline"><span>Download resume</span></a>
                 </div>
             </div>
         </section>

@@ -77,8 +77,10 @@ img {
 // Buttons
 
 .btn {
+    position: relative;
     color: var(--bg-color);
     background-color: var(--btn-color);
+    border: .1rem solid var(--btn-color);
     text-decoration: none;
     display: inline-block;
     padding: 1.4rem 2rem 1rem;
@@ -86,13 +88,54 @@ img {
     text-transform: uppercase;
     font-size: 1.2rem;
     letter-spacing: .05rem;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+
+    span {
+        position: relative;
+        z-index: 2;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        width: 100%;
+        background-color: var(--bg-color);
+        z-index: 1;
+
+        transition: all .2s ease-in-out;
+    }
+
+    &:hover {
+        color: var(--btn-color);
+        &:after {
+            left: 0;
+        }
+
+    }
 
     &--outline {
         color: var(--btn-color);
-        outline: .1rem var(--btn-color) solid;
-        outline-offset: -.1rem;
+        border-color: var(--btn-color);
         background-color: var(--bg-color);
+        outline: .1rem solid var(--btn-color);
+        outline-offset: -.1rem;
+
+        &:after {
+            display: none;
+        }
+
+        &:hover {
+            color: var(--btn-color);
+            outline-width: .3rem;
+            outline-offset: -.3rem;
+        }
     }
+
+
 }
 
 // Backgrounds
