@@ -1,14 +1,21 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useReward } from 'react-rewards';
 
 const ConfettiCanon = () => {
+
+    const [isReady, setIsReady] = useState(true);
 
     const handleScroll = () => {
 
         const bottom = Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight
 
-        if (bottom) {
+        if (bottom && isReady) {
             reward();
+            setIsReady(false);
+            setTimeout(() => {
+                setIsReady(true);
+                console.log('ready to fire');
+            }, 2000)
         }
     };
 
@@ -36,7 +43,6 @@ const ConfettiCanon = () => {
 
     return (
         <button
-            disabled={isAnimating}
             style={{
                 'position': 'fixed',
                 'bottom' : '0vh',
