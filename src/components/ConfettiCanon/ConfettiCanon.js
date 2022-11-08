@@ -14,22 +14,23 @@ const ConfettiCanon = () => {
             setIsReady(false);
             setTimeout(() => {
                 setIsReady(true);
-                console.log('ready to fire');
-            }, 2000)
+            }, 2500)
         }
     };
 
     useEffect(() => {
 
-        window.addEventListener('scroll', handleScroll, {
-            passive: true
-        });
+        if(isReady) {
+            window.addEventListener('scroll', handleScroll, {
+                passive: true
+            });
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+            };
+        }
 
-    }, []);
+    }, [isReady]);
 
     const { reward, isAnimating } = useReward(
         'rewardId',
