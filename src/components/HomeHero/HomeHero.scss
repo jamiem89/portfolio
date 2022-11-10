@@ -1,7 +1,9 @@
 .home-hero {
+    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
+    overflow: hidden;
 
     &__content {
 
@@ -48,6 +50,19 @@
 
         .btn:first-of-type {
             margin-right: 1rem;
+        }
+    }
+
+    &__bg-icon {
+        position: absolute;
+        bottom: -45%;
+        right: -20%;
+        width: var(--col-10);
+        transform: rotate(45deg);
+
+        svg {
+            fill: var(--c-darkest);
+            opacity: .05;
         }
     }
 }

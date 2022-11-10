@@ -8,6 +8,7 @@ body {
     width: 100vw;
     top: 1.8rem;
     left: 0;
+    z-index: 999;
     transition: all .4s ease-in-out;
 
     @media (min-width: 960px) {
@@ -51,7 +52,6 @@ body {
         text-indent: -999rem;
         background-color: transparent;
         cursor: pointer;
-        transition: all .3s ease-in-out;
 
         &:before,
         &:after {
