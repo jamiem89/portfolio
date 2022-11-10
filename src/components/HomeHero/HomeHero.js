@@ -11,11 +11,11 @@ const HomeHero = () => {
 
         let ctx = gsap.context(() => {
 
-            const heroTl = gsap.timeline();
+            const heroTl = gsap.timeline({delay: 2, defaults: {ease: 'power2.inOut'}});
             heroTl.delay(.2);
-            heroTl.from('.home-hero__title', { autoAlpha: 0, duration: .5});
-            heroTl.from('.home-hero__intro', { autoAlpha: 0, duration: .5}, '-=-.2');
-            heroTl.from('.btn', { autoAlpha: 0, duration: .5, stagger: .25}, '-=-.2');
+            heroTl.from('.home-hero__title span', { yPercent: -100, duration: .75, stagger: .125});
+            heroTl.from('.home-hero__intro span', { yPercent: -300, duration: .8}, '-=.65');
+            heroTl.from('.btn', { autoAlpha: 0, duration: .6, stagger: .125}, '-=.4');
 
         }, heroRef)
 
@@ -27,8 +27,8 @@ const HomeHero = () => {
     return (
         <section className="home-hero section-brand" ref={heroRef}>
             <div className="home-hero__content container">
-                <h1 className="home-hero__title">Hi, I'm Jamie</h1>
-                <p className="home-hero__intro">Frontend developer based in the UK, with an interest in graphic design and the great outdoors.</p>
+                <h1 className="home-hero__title"><span>Hi,</span> <span>I'm</span> <span>Jamie</span></h1>
+                <p className="home-hero__intro"><span>Frontend developer based in the UK, with an interest in graphic design and the great outdoors.</span></p>
                 <div className="home-hero__actions">
                     <a href="/" className="btn"><span>View projects</span></a>
                     <a href="/" className="btn btn--outline"><span>Download resume</span></a>

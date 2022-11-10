@@ -109,13 +109,12 @@ img {
         transition: all .2s ease-in-out;
     }
 
-    &:hover {
-        color: var(--btn-color);
-        &:after {
-            left: 0;
-        }
-
-    }
+    // &:hover {
+    //     color: var(--btn-color);
+    //     &:after {
+    //         left: 0;
+    //     }
+    // }
 
     &--outline {
         color: var(--btn-color);
@@ -128,11 +127,11 @@ img {
             display: none;
         }
 
-        &:hover {
-            color: var(--btn-color);
-            outline-width: .3rem;
-            outline-offset: -.3rem;
-        }
+        // &:hover {
+        //     color: var(--btn-color);
+        //     outline-width: .3rem;
+        //     outline-offset: -.3rem;
+        // }
     }
 
 
