@@ -2,4 +2,4 @@
 
 Built using React, SCSS and GSAP.
 
-(http://www.google.com)[Live link]
+(Live link)[http://www.google.com]
