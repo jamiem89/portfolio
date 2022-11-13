@@ -9,12 +9,12 @@ import Contact from './components/Contact/Contact'
 
 function App() {
 
-    const [isReady, setIsReady] = useState(false)
+    const [isReady, setIsReady] = useState(true)
 
     return (
     <div className="app stop-scrolling">
 
-        <Splash setIsReady={setIsReady}/>
+        {/* <Splash setIsReady={setIsReady}/> */}
 
         {isReady && (<>
             <Header />

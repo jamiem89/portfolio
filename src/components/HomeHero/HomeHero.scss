@@ -66,4 +66,19 @@
             opacity: .05;
         }
     }
+
+    &__bg {
+        position: absolute;
+        opacity: 0.05;
+        width: 80%;
+        height: auto;
+        transform: rotate(45deg);
+        top: -5vh;
+        right: -10vw;
+        z-index: 1;
+
+        svg path {
+            fill: var(--c-darkest);
+        }
+    }
 }

@@ -34,11 +34,12 @@ const ConfettiCanon = () => {
 
     const { reward, isAnimating } = useReward(
         'rewardId',
-        'confetti',
+        'emoji',
         {
             'spread' : 140,
-            'elementCount' : 180,
-            'elementSize' : 10
+            'elementCount' : 120,
+            'elementSize' : 40,
+            'colors': ['#80FCD3']
         }
     );
 

@@ -1,10 +1,10 @@
 .latest-projects {
-
     padding-top: 4rem;
     padding-bottom: 4rem;
+    // overflow: hidden;
 
     @media (min-width: 960px) {
-        padding-top: 8rem;
+        padding-top: 0;
         padding-bottom: 8rem;
 
         .container  {
@@ -32,7 +32,9 @@
 
             @media (min-width: 960px) {
                 position: sticky;
-                top: 8rem;
+                top: 0rem;
+                padding-top: 8rem;
+                height: 100vh;
                 margin-bottom: 0;
                 text-align: left;
             }
@@ -51,6 +53,7 @@
 
             @media (min-width: 960px) {
                 display: initial;
+                padding-top: 8rem;
 
                 > * {
                     width: 100%;
@@ -84,5 +87,24 @@
             font-size: 2.4rem;
         }
 
+    }
+
+    &__bg {
+        display: none;
+
+        @media (min-width: 960px) {
+            position: absolute;
+            top: 20vh;
+            left: -20vw;
+            width: 65vw;
+            opacity: 0.03;
+            transform: rotate(45deg);
+            display: block;
+
+            svg {
+                fill: var(--c-lightest);
+            }
+
+        }
     }
 }

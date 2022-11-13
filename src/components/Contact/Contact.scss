@@ -1,0 +1,18 @@
+.contact {
+    min-height: 50vw;
+    padding-top: 5rem;
+
+    @media (min-width: 960px) {
+        padding-top: 8rem;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 13vw;
+        overflow: hidden;
+
+        span {
+            display: inline-block;
+        }
+    }
+}

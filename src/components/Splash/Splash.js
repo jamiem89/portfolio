@@ -25,6 +25,9 @@ const Splash = ({setIsReady}) => {
                 body.classList.remove('stop-scrolling');
                 setIsReady(true);
             }, '<.05')
+            splashTl.add(() => {
+                document.querySelector('.splash').remove();
+            })
 
         }, splashRef)
 

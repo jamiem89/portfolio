@@ -1,5 +1,7 @@
-import './LatestProjects.scss';
 import ProjectCard from '../ProjectCard/ProjectCard'
+import { ReactComponent as LogoIcon } from '../../icons/logo.svg';
+
+import './LatestProjects.scss';
 
 const LatestProjects = ({projects} ) => {
     return (
@@ -8,6 +10,9 @@ const LatestProjects = ({projects} ) => {
                 <div className="latest-projects__col">
                     <h2 className="latest-projects__title">Recent work</h2>
                     <p className="latest-projects__intro">A selection of recent works, ranging from full custom WordPress builds, to bespoke ReactJS applications.</p>
+                    <div className="latest-projects__bg">
+                        <LogoIcon />
+                    </div>
                 </div>
                 <div className="latest-projects__col">
                     {projects && projects.map(project => {

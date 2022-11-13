@@ -1,3 +1,4 @@
+import { ReactComponent as LogoIcon } from '../../icons/logo.svg';
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from 'gsap';
 
@@ -33,6 +34,9 @@ const HomeHero = () => {
                     <a href="/" className="btn"><span>View projects</span></a>
                     <a href="/" className="btn btn--outline"><span>Download resume</span></a>
                 </div>
+            </div>
+            <div className="home-hero__bg">
+                <LogoIcon />
             </div>
         </section>
      );
