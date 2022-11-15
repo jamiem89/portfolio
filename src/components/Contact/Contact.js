@@ -14,23 +14,27 @@ const Contact = () => {
 
     useLayoutEffect(() => {
 
-        let ctx = gsap.context(() => {
+        setTimeout(() => {
 
-            gsap.registerPlugin(ScrollTrigger);
+            let ctx = gsap.context(() => {
 
-            const contactTl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: contactRef.current,
-                    start: 'top 70%'
-                }
-            })
+                gsap.registerPlugin(ScrollTrigger);
 
-            contactTl.from('.contact__title span', {yPercent: 120, duration: .6, stagger: 0.05, ease: 'power3.inOut'})
-            contactTl.from('.contact__list-item', {yPercent: 100, opacity: 0, duration: .6, ease: 'power3.inOut', stagger: .05}, '-=.5')
+                const contactTl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: contactRef.current,
+                        start: 'center 70%',
+                    }
+                })
 
-        }, contactRef)
+                contactTl.from('.contact__title span', {yPercent: 120, duration: .6, stagger: 0.05, ease: 'power3.inOut'})
+                contactTl.from('.contact__list-item', {yPercent: 100, opacity: 0, duration: .6, ease: 'power3.inOut', stagger: .05}, '-=.5')
 
-        return () => ctx.revert();
+            }, contactRef)
+
+            return () => ctx.revert();
+
+        }, 2000);
 
     }, [])
 

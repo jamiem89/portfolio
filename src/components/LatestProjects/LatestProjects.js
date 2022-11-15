@@ -4,6 +4,7 @@ import { ReactComponent as LogoIcon } from '../../icons/logo.svg';
 import './LatestProjects.scss';
 
 const LatestProjects = ({projects} ) => {
+
     return (
         <section className="latest-projects section-dark" id="projects">
             <div className="container">
