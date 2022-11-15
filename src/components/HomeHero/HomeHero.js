@@ -13,7 +13,7 @@ const HomeHero = () => {
         let ctx = gsap.context(() => {
 
             const heroTl = gsap.timeline({delay: 2, defaults: {ease: 'power2.inOut'}});
-            heroTl.delay(.2);
+            heroTl.delay(2.5);
             heroTl.from('.home-hero__title span', { yPercent: -100, duration: .75, stagger: .125});
             heroTl.from('.home-hero__intro span', { yPercent: -300, duration: .8}, '-=.65');
             heroTl.from('.btn', { autoAlpha: 0, duration: .6, stagger: .125}, '-=.4');
