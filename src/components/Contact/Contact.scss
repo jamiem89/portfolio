@@ -1,6 +1,10 @@
 .contact {
-    min-height: 50vw;
-    padding-top: 5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
 
     @media (min-width: 960px) {
         padding-top: 8rem;
@@ -10,9 +14,70 @@
         text-align: center;
         font-size: 13vw;
         overflow: hidden;
+        margin-bottom: 2.6rem;
+
+        @media (min-width: 960) {
+            margin-bottom: 6rem;
+        }
 
         span {
             display: inline-block;
+        }
+    }
+
+    &__list {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        margin-bottom: 3rem;
+        z-index: 1;
+
+        @media (min-width:960px) {
+            margin-bottom: 6rem;
+        }
+    }
+
+    &__list-item {
+        &:not(:last-child) {
+            margin-right: 3rem;
+
+            @media (min-width: 960px) {
+                margin-right: 6rem;
+            }
+        }
+
+        svg {
+            height: 4rem;
+            width: 4rem;
+            @media (min-width: 960px) {
+                height: 6rem;
+                width: 6rem;
+            }
+        }
+
+        a {
+            transition: opacity .3s ease-out;
+            &:hover {
+                opacity: .4;
+            }
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        svg {
+            fill: var(--c-darkest);
+            opacity: 0.05;
+            transform: rotate(235deg);
+            object-fit: cover;
+            object-position: center center;
+            z-index: 0;
         }
     }
 }

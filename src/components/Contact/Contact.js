@@ -1,3 +1,7 @@
+import { ReactComponent as Mail } from '../../icons/icon__mail.svg';
+import { ReactComponent as Twitter } from '../../icons/icon__twitter.svg';
+import { ReactComponent as Linkedin } from '../../icons/icon__linkedin.svg';
+import { ReactComponent as Logo } from '../../icons/logo.svg';
 import { useRef, useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -22,9 +26,7 @@ const Contact = () => {
             })
 
             contactTl.from('.contact__title span', {yPercent: 120, duration: .6, stagger: 0.05, ease: 'power3.inOut'})
-            contactTl.add(() => {
-                console.log('timmy')
-            })
+            contactTl.from('.contact__list-item', {yPercent: 100, opacity: 0, duration: .6, ease: 'power3.inOut', stagger: .05}, '-=.5')
 
         }, contactRef)
 
@@ -33,8 +35,8 @@ const Contact = () => {
     }, [])
 
     return (
-        <section className="contact" ref={contactRef}>
-            <h3 class="contact__title">
+        <section className="contact section-brand" ref={contactRef} id="contact">
+            <h3 className="contact__title">
                 <span>F</span>
                 <span>a</span>
                 <span>n</span>
@@ -48,7 +50,27 @@ const Contact = () => {
                 <span>a</span>
                 <span>t</span>
                 <span>?</span>
-                </h3>
+            </h3>
+            <ul className="contact__list">
+                <li className="contact__list-item">
+                    <a href="https://www.linkedin.com/in/jamie-moore-360579147/">
+                        <Linkedin />
+                    </a>
+                </li>
+                <li className="contact__list-item">
+                    <a href="https://twitter.com/JamieMooreDev">
+                        <Twitter />
+                    </a>
+                </li>
+                <li className="contact__list-item">
+                    <a href="mailto:jamiemoore2689@gmail.com">
+                        <Mail />
+                    </a>
+                </li>
+            </ul>
+            <div className="contact__bg">
+                <Logo />
+            </div>
         </section>
      );
 }

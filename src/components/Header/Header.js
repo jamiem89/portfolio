@@ -43,9 +43,9 @@ const Header = () => {
                 </a>
 
                 <ul className="header__menu">
-                    <li className="header__menu-item"><a className="header__menu-link" href="#">About</a></li>
-                    <li className="header__menu-item"><a className="header__menu-link" href="#">Projects</a></li>
-                    <li className="header__menu-item"><a className="header__menu-link" href="#">Get in touch</a></li>
+                    <li className="header__menu-item"><a className="header__menu-link" href="#about">About</a></li>
+                    <li className="header__menu-item"><a className="header__menu-link" href="#projects">Projects</a></li>
+                    <li className="header__menu-item"><a className="header__menu-link" href="#contact">Get in touch</a></li>
                 </ul>
 
                 <button className="header__trigger" onClick={toggleMenu}>

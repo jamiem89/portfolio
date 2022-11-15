@@ -28,12 +28,14 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'League Spartan', sans-serif;
     font-size: 1.6rem;
     font-weight: 200;
+    background: var(--c-darkest);
 
     // Fallback vars
     --text-color: var(--c-darkest);
@@ -42,6 +44,7 @@ body {
 
 body.stop-scrolling {
     overflow: hidden;
+    scroll-behavior: initial;
 }
 
 // Spacing

@@ -18,6 +18,7 @@ const HomeHero = () => {
             heroTl.from('.home-hero__intro span', { yPercent: -300, duration: .8}, '-=.65');
             heroTl.from('.btn', { autoAlpha: 0, duration: .6, stagger: .125}, '-=.4');
 
+
         }, heroRef)
 
         return () => ctx.revert();
@@ -26,7 +27,7 @@ const HomeHero = () => {
 
 
     return (
-        <section className="home-hero section-brand" ref={heroRef}>
+        <section className="home-hero section-brand" ref={heroRef} id="#about">
             <div className="home-hero__content container">
                 <h1 className="home-hero__title"><span>Hi,</span> <span>I'm</span> <span>Jamie</span></h1>
                 <p className="home-hero__intro"><span>Frontend developer based in the UK, with an interest in graphic design and the great outdoors.</span></p>

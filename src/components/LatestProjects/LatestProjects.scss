@@ -1,7 +1,6 @@
 .latest-projects {
     padding-top: 4rem;
     padding-bottom: 4rem;
-    // overflow: hidden;
 
     @media (min-width: 960px) {
         padding-top: 0;
@@ -87,24 +86,5 @@
             font-size: 2.4rem;
         }
 
-    }
-
-    &__bg {
-        display: none;
-
-        @media (min-width: 960px) {
-            position: absolute;
-            top: 20vh;
-            left: -20vw;
-            width: 65vw;
-            opacity: 0.03;
-            transform: rotate(45deg);
-            display: block;
-
-            svg {
-                fill: var(--c-lightest);
-            }
-
-        }
     }
 }
