@@ -32,8 +32,8 @@ const HomeHero = () => {
                 <h1 className="home-hero__title"><span>Hi,</span> <span>I'm</span> <span>Jamie</span></h1>
                 <p className="home-hero__intro"><span>Frontend developer based in the UK, with an interest in graphic design and the great outdoors.</span></p>
                 <div className="home-hero__actions">
-                    <a href="/" className="btn"><span>View projects</span></a>
-                    <a href="/" className="btn btn--outline"><span>Download resume</span></a>
+                    <a href="#projects" className="btn"><span>View projects</span></a>
+                    {/* <a href="/" className="btn btn--outline" disabled><span>Download resume</span></a> */}
                 </div>
             </div>
             <div className="home-hero__bg">
