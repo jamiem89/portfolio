@@ -56,7 +56,7 @@ const ProjectCard = ({img, title, desc, livelink, repolink}) => {
                 <div className="project-card__desc" dangerouslySetInnerHTML={{__html: desc}}></div>
             </div>
             <div className="project-card__actions">
-                {livelink && <a href={livelink} className="btn "><span>View project</span></a>}
+                {livelink && <a href={livelink} className="btn ">View project</a>}
                 {repolink && <a href={repolink} className="btn btn--outline"><span>View source code</span></a>}
             </div>
 
