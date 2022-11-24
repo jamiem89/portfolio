@@ -72,12 +72,15 @@
         width: 100%;
 
         svg {
-            fill: var(--c-darkest);
             opacity: 0.05;
             transform: rotate(235deg);
             object-fit: cover;
             object-position: center center;
             z-index: 0;
+
+            path {
+                fill: var(--c-darkest);
+            }
         }
     }
 }
